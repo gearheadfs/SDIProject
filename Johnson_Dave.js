@@ -29,21 +29,27 @@ var elements = new Array ("Air",
 						  "Magic",
 						  "Tech");
 						  
-function playToday(yes,no){
+function playGameToday(yes,no){
 	var play = true
 	if (play===true){
 	
 	console.log();
 	
 	} else {
-	console.log();
+	console.log();						//This is the Procedure step that does not have any function outputted.
 	
 	};
 
 };
 
-playToday();
+playGameToday();
 
 
 
 
+// Boolean function
+if (characters <= 32){
+	console.log("Gavin has " + characters + " characters in his collection. They include: " + charNames);
+	} else {
+	console.log("Keep collecting!");
+};
