@@ -30,7 +30,7 @@ var elements = new Array ("Air",
 						  "Tech");
 						  
 function playGameToday(yes,no){
-	var play = true
+	var play = true;
 	if (play===true){
 	
 	console.log();
@@ -52,4 +52,17 @@ if (characters <= 32){
 	console.log("Gavin has " + characters + " characters in his collection. They include: " + charNames);
 	} else {
 	console.log("Keep collecting!");
+	
 };
+function char(){
+return "There are 32 total characters"
+};
+
+
+//Number Function
+// Gavin currently has 13 out of 32 characters which makes 19 left to go
+var charRemain = 19;
+	while(charRemain >= 0){
+	console.log(charRemain + " characters remain.");
+	charRemain--;
+	};
