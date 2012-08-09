@@ -5,8 +5,8 @@ Assignment: Project 2
 */
 
 
-var game = "Skylanders: Spyro's Adventure";
-var characters = 13
+var game = "Skylanders: Spyro's Adventure"; //String Global Variable
+var characters = 13; //Numeric Global Variable and below are 2 Array Variables
 var charNames = new Array ("Spyro", 
 						   "Gill Grunt", 
 						   "Trigger Happy", 
@@ -28,4 +28,22 @@ var elements = new Array ("Air",
 						  "Water",
 						  "Magic",
 						  "Tech");
-					
+						  
+function playToday(yes,no){
+	var play = true
+	if (play===true){
+	
+	console.log();
+	
+	} else {
+	console.log();
+	
+	};
+
+};
+
+playToday();
+
+
+
+
