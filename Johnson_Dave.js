@@ -9,8 +9,8 @@ var gameTitle = "Skylanders: Spyro's Adventure"; //String Global Variable
 var gameTitleTF = true;
 var charTotal = 32;
 var twoPlayers = true;
-var gavinsChars = true
-var elementals = true
+var gavinsChars = true;
+var elementals = true;
 var charNames = new Array ("Spyro", 
 						   "Gill Grunt", 
 						   "Trigger Happy", 
@@ -57,24 +57,23 @@ var playTogether = function(twoPlayers){
 		};
 return playAlone;
 };
-
-var returnPlay = playTogether
-console.log(returnPlay(twoPlayers));
+console.log(playTogether(twoPlayers));
+//var returnPlay = playTogether
+//console.log(returnPlay(twoPlayers));
 
 
 //Number function. However I've tried and tried but can't understand why it stops when it hits 22 characters and 10 remaining and then turns the next number, 23, into an actual number. I assume it has to do with the return.		
 var charRemain = function(charTotal){
 		var currentTotal = 13;
-			while(currentTotal < charTotal){
-			console.log("Gavin has " + currentTotal + " characters. " + (charTotal - 13) + " characters remain.");
+			while(currentTotal <= charTotal){
+			console.log("Gavin has " + currentTotal + " characters. " + (charTotal - currentTotal) + " characters remain.");
 			currentTotal++;
-			charTotal--;
 		};
 		return currentTotal
 	};
-	
-var returnTotal = charRemain;
-console.log(returnTotal(charTotal));
+console.log(charRemain(charTotal));	
+//var returnTotal = charRemain;
+//console.log(returnTotal(charTotal));
 
 
 //String Function
@@ -87,9 +86,9 @@ var game = function(gameTitle){
 	};
 	return awesome
 };
-
-var returnString = game;
-console.log(returnString(gameTitle));
+console.log(game(gameTitle));
+//var returnString = game;
+//console.log(returnString(gameTitle));
 
 
 //Array Function
@@ -106,6 +105,7 @@ var listOfChar = function(charNames){
 		};
 		return listOfElements
 };
-var returnArray = listOfChar
-console.log(returnArray(charNames));
+console.log(listOfChar(charNames));
+//var returnArray = listOfChar
+//console.log(returnArray(charNames));
 
