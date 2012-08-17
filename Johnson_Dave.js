@@ -1,82 +1,97 @@
 /* 
 Dave Johnson
 SDI 1208: Scalable Data & Infrastructures
-Assignment: Project 2
+Assignment: Project 3
+08/14/2012
 */
 
 
-var gameTitle = "Skylanders: Spyro's Adventure"; //String Global Variable
-var gameTitleTF = true;
-var charTotal = 32;
-var twoPlayers = true;
-var gavinsChars = true;
-var elementals = true;
-var charNames = new Array ("Spyro", 
-						   "Gill Grunt", 
-						   "Trigger Happy", 
-						   "Ghost Roaster",
-						   "Chop Chop", 
-						   "Voodood",
-						   "Stealth Elf", 
-						   "Flameslinger",
-						   "Prism Break",
-						   "Terrafin",
-						   "Sonic Boom",
-						   "Wrecking Ball",
-						   "Boomer");
-var elements = new Array ("Air",
-						  "Life",
-						  "Earth",
-						  "Fire",
-						  "Undead",
-						  "Water",
-						  "Magic",
-						  "Tech");
+var gameTitle = "Skylanders: Spyro's Adventure", //String Global Variable
+	gameTitleTF = true,
+	charTotal = 32,
+	twoPlayers = true,
+	gavinsChars = true,
+	elementals = true,
+	currentCharacters = ["Spyro",
+						 "Trigger Happy",
+						 "Gill Grunt",
+						 "Prism Break",
+						 "Terrafin",
+						 "Boomer",
+						 "Ghost Roaster",
+						 "Stealth Elf",
+						 "Sonic Boom",
+						 "Flameslinger",
+						 "Chop Chop",
+						 "Voodood",
+						 "Wrecking Ball"
+						 ];
+	;
 
 
-		  
+//Object
+
+var characters = {
+    	charName: "Spyro",
+    	element: "Magic",
+    	level:       ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"],
+    	upgradable: false,
+    	upgrade: function () {
+    	console.log("Already level " + level[9] + ".");
+    	},
+    
+};
+	var key = "charName";
+	console.log(characters[key]);
+		console.log(characters.charName, characters.element, characters.level[9]);
+					
+					
+					
+					
 						  
-//Procedure
-var play = function(playToday){
-	if (playToday===true){
-	console.log("Let's start playing!");
-		} else {
-	console.log("Maybe we can play tomorrow.");
-	};
+//New Procedure
+var play = function(){
+	console.log("Gavin, do you want to play today? Because I want to play as a " + charElements.flameslinger + ".");
 
 };
 
 
-// Boolean function
-var playTogether = function(twoPlayers){
-		var playAlone = false
-		if ((playTogether || twoPlayers===true) && (playTogether !=twoPlayers)){
-			playAlone = false;
+//New Boolean function. Added an additional nested conditional
+var wannaPlay = function(twoPlayers){
+		var playAlone = false;
+		var allElements = false;
+		if ((wannaPlay || twoPlayers===true) && (wannaPlay != twoPlayers)){
+			playAlone = true;
+/* Nested Conditional*/	if (allElements === false){
+						allElements = false;
+						} else {
+						llElements = true;
+		}; 
 		} else {
 			playAlone = true;
 		};
-return playAlone;
+return allElements;
 };
-console.log(playTogether(twoPlayers));
-//var returnPlay = playTogether
-//console.log(returnPlay(twoPlayers));
+console.log(wannaPlay());
 
 
-//Number function. However I've tried and tried but can't understand why it stops when it hits 22 characters and 10 remaining and then turns the next number, 23, into an actual number. I assume it has to do with the return.		
+
+//New Number function. Fixed Countdown/Math problem and added a new number
 var charRemain = function(charTotal){
 		var currentTotal = 13;
+		var	highestLevel = 10;
 			while(currentTotal <= charTotal){
 			console.log("Gavin has " + currentTotal + " characters. " + (charTotal - currentTotal) + " characters remain.");
 			currentTotal++;
 		};
+		console.log("The highest level each character can achieve is " + highestLevel + ".");
 		return currentTotal
-	};
-console.log(charRemain(charTotal));	
-//var returnTotal = charRemain;
-//console.log(returnTotal(charTotal));
+		};
+var allCharacters = charRemain(charTotal);	
 
 
-//String Function
+
+//New String Function
 var game = function(gameTitle){
 	var awesome = "This game is awesome!";
 	if (gameTitleTF===true){
@@ -87,13 +102,12 @@ var game = function(gameTitle){
 	return awesome
 };
 console.log(game(gameTitle));
-//var returnString = game;
-//console.log(returnString(gameTitle));
+
 
 
 //Array Function
 var listOfChar = function(charNames){
-	var listOfElements = elements
+	var characters = currentCharacters
 		if (elementals===true && gavinsChars===true){
 			console.log("Gavin's 13 characters consist of " + charNames + ". Each character belongs to a certain element which there are 8 elements total.");
 		if (gavinsChars===true){
@@ -103,9 +117,7 @@ var listOfChar = function(charNames){
 			console.log("He wants them all!");
 			
 		};
-		return listOfElements
+		return currentCharacters
 };
-console.log(listOfChar(charNames));
-//var returnArray = listOfChar
-//console.log(returnArray(charNames));
+console.log(listOfChar(currentCharacters));
 
