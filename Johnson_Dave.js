@@ -10,6 +10,7 @@ var gameTitle = "Skylanders: Spyro's Adventure", //String Global Variable
 	gameTitleTF = true,
 	charTotal = 32,
 	twoPlayers = true,
+	upgrade = false,
 	gavinsChars = true,
 	elementals = true,
 	currentCharacters = ["Spyro",
@@ -30,22 +31,198 @@ var gameTitle = "Skylanders: Spyro's Adventure", //String Global Variable
 
 
 //Object
+var currentCharacters = {
 
-var characters = {
-    	charName: "Spyro",
-    	element: "Magic",
-    	level:       ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"],
-    	upgradable: false,
-    	upgrade: function () {
-    	console.log("Already level " + level[9] + ".");
-    	},
-    
+	"characters": {
+		"character01": {
+			"name": "Spyro",
+			"element": "Magic",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+			
+		},
+		"character02": {
+			"name": "Trigger Happy",
+			"element": "Tech",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade ===this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character03": {
+			"name": "Gill Grunt",
+			"element": "Water",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character04": {
+			"name": "Prism Break",
+			"element": "Earth",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character05": {
+			"name": "Terrafin",
+			"element": "Earth",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character06": {
+			"name": "Boomer",
+			"element": "Tech",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character07": {
+			"name": "Ghost Roaster",
+			"element": "Undead",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character08": {
+			"name": "Stealth Elf",
+			"element": "Life",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character09": {
+			"name": "Sonic Boom",
+			"element": "Air",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character10": {
+			"name": "Flameslinger",
+			"element": "Fire",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character11": {
+			"name": "Chop Chop",
+			"element": "Undead",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character12": {
+			"name": "Voodood",
+			"element": "Magic",
+			"level": 10,
+			"upgradable": false,
+			"upgrade": function () {
+				var toUpgrade = this.upgradable;
+				if (toUpgrade === this.upgradable){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		},
+		"character13": {
+			"name": "Wrecking Ball",
+			"element": "Magic",
+			"level": 6,
+			"upgradable": true,
+			"upgrade": function () {
+				var toUpgrade = false;
+				if (toUpgrade === this.upgrade){
+				console.log(this.name + " is already level " + this.level + ".");
+				} else {
+				console.log(this.name + " needs to be upgraded to level " + this.level + ".");
+			};
+		}
+	}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}	
+}
+}
+}
 };
-	var key = "charName";
-	console.log(characters[key]);
-		console.log(characters.charName, characters.element, characters.level[9]);
-					
-					
+console.log(currentCharacters.characters.character01.upgrade());
+//currentCharacters.characters.character13.upgrade();
+		
+			
 					
 					
 						  
@@ -109,7 +286,7 @@ console.log(game(gameTitle));
 var listOfChar = function(charNames){
 	var characters = currentCharacters
 		if (elementals===true && gavinsChars===true){
-			console.log("Gavin's 13 characters consist of " + charNames + ". Each character belongs to a certain element which there are 8 elements total.");
+			console.log("Gavin's 13 characters consist of " + currentCharacters.characters.character01.name.length + ". Each character belongs to a certain element which there are 8 elements total.");
 		if (gavinsChars===true){
 			console.log("Gavin's favorite is " + charNames[3] + ".");
 		};
@@ -117,7 +294,7 @@ var listOfChar = function(charNames){
 			console.log("He wants them all!");
 			
 		};
-		return currentCharacters
+		return characters
 };
 console.log(listOfChar(currentCharacters));
 
