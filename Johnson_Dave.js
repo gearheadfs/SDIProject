@@ -61,8 +61,12 @@ var myLibrary = function(){
 		};
 												// End Number of Days between two dates
 //---------------------------------------------------------------------------
-
-
+												// Given a number as a string, converted to an actual number
+		
+		var convertString = function(number){
+				var changedToNumber = parseFloat();
+				return number;
+		};
 
 
 																	
@@ -71,7 +75,8 @@ var myLibrary = function(){
 					"validWebAddy": validWebAddy,
 					"validTelly": validTelly,
 					"currencyDecimal": currencyDecimal,
-					"today": today
+					"today": today,
+					"convertString": convertString
 				};																						
 																			
 };
@@ -81,4 +86,5 @@ console.log(newLib.validEmail("http://www.asdfjklsemicolon.com")); // Verify Ema
 console.log(newLib.validWebAddy("asdfjkl@semicolon.com")); // Verify Web Url
 console.log(newLib.validTelly("120-987-654three")); // Verify Telephone
 console.log("$" + newLib.currencyDecimal(5308.39653) + " is how much I wish I made a week."); // 2 Decimal Places for Currency
-console.log(newLib.today()); // Number of Days between two dates
+console.log(newLib.today(2012, 03, 14)); // Number of Days between two dates
+console.log(newLib.convertString("48.13"));
