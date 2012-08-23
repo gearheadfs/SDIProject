@@ -50,21 +50,35 @@ var myLibrary = function(){
 				return cents.toFixed(2);
 		};
 												// End 2 Decimal places				
-//---------------------------------------------------------------------------																		
+//---------------------------------------------------------------------------	
+												//Number of Days between two dates
+		var today = function(timeFrame){
+				var oneDay = 1000 * 60 * 60 * 24;
+				var currentDay = new Date();
+				var xmas = new Date(2012, 11, 25);
+				console.log(Math.ceil((xmas.getTime() - currentDay.getTime())/(oneDay)) + " days until Christmas!");
+			return timeFrame
+		};
+												// End Number of Days between two dates
+//---------------------------------------------------------------------------
+
+
+
+
+																	
 				return {
 					"validEmail": validEmail,
 					"validWebAddy": validWebAddy,
 					"validTelly": validTelly,
-					"currencyDecimal": currencyDecimal
+					"currencyDecimal": currencyDecimal,
+					"today": today
 				};																						
 																			
 };
-
-
-
 
 var newLib = new myLibrary();
 console.log(newLib.validEmail("http://www.asdfjklsemicolon.com")); // Verify Email Address
 console.log(newLib.validWebAddy("asdfjkl@semicolon.com")); // Verify Web Url
 console.log(newLib.validTelly("120-987-654three")); // Verify Telephone
-console.log("$" + newLib.currencyDecimal(5308.39653) + " is how much I wish I made a week.");
+console.log("$" + newLib.currencyDecimal(5308.39653) + " is how much I wish I made a week."); // 2 Decimal Places for Currency
+console.log(newLib.today()); // Number of Days between two dates
